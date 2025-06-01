@@ -40,6 +40,14 @@ export default function Header() {
               About
             </Link>
           </li>
+          {/* 인증된 사용자에게만 '새 글 작성' 링크 표시 */}
+          <SignedIn>
+            <li>
+              <Link href="/admin/posts/create" className="hover:underline">
+                새 글 작성
+              </Link>
+            </li>
+          </SignedIn>
         </ul>
 
         {/* 인증 상태에 따른 UI */}
@@ -90,6 +98,14 @@ export default function Header() {
                   About
                 </Link>
               </li>
+              {/* 모바일 메뉴에 인증된 사용자에게만 '새 글 작성' 링크 표시 */}
+              <SignedIn>
+                <li>
+                  <Link href="/admin/posts/create" className="hover:underline">
+                    새 글 작성
+                  </Link>
+                </li>
+              </SignedIn>
             </ul>
           </SheetContent>
         </Sheet>
